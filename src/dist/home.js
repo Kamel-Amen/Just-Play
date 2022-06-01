@@ -53,7 +53,7 @@ typeWriter.style.setProperty('--characters', text.length);
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 // Start Section 3
-fetch('http://myjson.dit.upm.es/api/bins/d4a9')
+fetch('https://myjson.dit.upm.es/api/bins/d4a9')
   .then((response) => response.json())
   .then((data) =>
     data.map((game) => {
