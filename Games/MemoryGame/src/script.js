@@ -31,12 +31,12 @@ function startGame() {
   if (!gamePlay) {
     gamePlay = true;
     tileImages = [
-      '/Imgs/game/1.jpg',
-      '/Imgs/game/2.jpg',
-      '/Imgs/game/3.jpg',
-      '/Imgs/game/4.jpg',
-      '/Imgs/game/5.jpg',
-      '/Imgs/game/6.jpg',
+      './Imgs/game/1.jpg',
+      './Imgs/game/2.jpg',
+      './Imgs/game/3.jpg',
+      './Imgs/game/4.jpg',
+      './Imgs/game/5.jpg',
+      './Imgs/game/6.jpg',
     ];
     tileArray = tileImages.concat(tileImages);
     shuffleArray(tileArray);
