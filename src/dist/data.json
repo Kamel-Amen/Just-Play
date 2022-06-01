@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Word Scramble Game",
+    "info": "Simple guessing the right word game, with 3 different levels of difficulty and points battery to collect all your correct answers with points.",
+    "videoSrc": "Videos/WSGG.mp4",
+    "game": "Games/Word Scramble Guessing Game/index.html"
+  },
+  {
+    "id": 2,
+    "name": "Guess The Number Game",
+    "info": "Guess the numbers game, with 3 different levels of difficulty and points battery to collect all your correct answers with points.",
+    "videoSrc": "Videos/GNG.mp4",
+    "game": "Games/Guess The Number/index.html"
+  },
+  {
+    "id": 3,
+    "name": "Guessing Word Game",
+    "info": "Guess the right word from the squares down. You have 3 lives and timer to keep tracking and 5 levels fo difficulty to choose from.",
+    "videoSrc": "Videos/GWG.mp4",
+    "game": "Games/Guessing Word Game/index.html"
+  },
+  {
+    "id": 4,
+    "name": "Hit The Computer",
+    "info": "Hit the computers to achieve success as you have certain number of computers that you must hit.",
+    "videoSrc": "Videos/HGG.mp4",
+    "game": "Games/Hit A Computer/index.html"
+  },
+  {
+    "id": 5,
+    "name": "Memory Game",
+    "info": "Remember the pictures places and win, all what you do is collect and translated to points.",
+    "videoSrc": "Videos/MG.mp4",
+    "game": "Games/MemoryGame/index.html"
+  },
+  {
+    "id": 6,
+    "name": "Color Matching Game",
+    "info": "Match the color and win.",
+    "videoSrc": "Videos/CMG.mp4",
+    "game": "Games/Color Matching Game/index.html"
+  }
+]

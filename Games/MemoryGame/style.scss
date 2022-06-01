@@ -1,0 +1,211 @@
+/* Variables */
+$main_color: #51a2d9;
+$second_color: #53c0f0;
+$third_color: #ffcc44;
+$fourth_color: #51d68a;
+$fifth_color: #8a140e;
+$sixth_color: #976abd;
+$seventh_color: #333;
+/* Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Bangers&family=Bowlby+One+SC&family=Cairo&family=Indie+Flower&family=Josefin+Sans&family=Josefin+Slab&family=Lobster&family=Ms+Madi&family=Pacifico&family=Poppins&family=Raleway&family=Square+Peg&display=swap');
+
+/* Start Body */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0 !important;
+}
+body {
+  background-image: linear-gradient(to right, $main_color, #ddd);
+}
+/* End Body */
+
+/* Start Menus */
+.menu {
+  height: 8vh;
+  background: $seventh_color;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  color: $third_color;
+  border: 3px solid $third_color;
+  border-top: 0;
+  text-align: center;
+  border-radius: 0 0 25px 25px;
+  &:hover {
+    height: 100vh;
+  }
+  #header {
+    font: normal 2em / 40px 'Pacifico';
+    text-decoration: underline;
+  }
+}
+.left-menu {
+  .box {
+    width: 40%;
+    background-clip: padding-box;
+    a {
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      border: 2px solid $seventh_color;
+      border-radius: 50%;
+      background: $third_color;
+      animation: scaleAni 0.8s ease-in-out infinite;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .overlay {
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target {
+      visibility: visible;
+      opacity: 1;
+    }
+    .popup {
+      margin: 70px auto;
+      border-radius: 5px;
+      width: 30%;
+      transition: all 3s ease-in-out;
+      background: #111 !important;
+      color: $third_color;
+      h1 {
+        font-family: 'Poppins';
+      }
+      .close {
+        top: 20px;
+        right: 30px;
+        color: #ccc;
+      }
+      .content {
+        max-height: 30%;
+        font-family: 'Josefin Sans';
+        line-height: 1.7em;
+      }
+    }
+  }
+}
+.right-menu {
+  & > .info {
+    font: normal 1.2em / normal 'Josefin sans';
+    & > .row > p {
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+}
+/* End Menus */
+
+/* Start Game */
+.game {
+  h1 {
+    font-family: 'Pacifico';
+    color: $third_color;
+    text-shadow: 2px 2px 2px #000;
+  }
+  button {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $seventh_color;
+    color: $fourth_color;
+    font: normal 1.5em / normal 'Pacifico';
+    border: 2px solid $third_color;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+      background: $third_color;
+      border-color: $seventh_color;
+      color: $seventh_color;
+    }
+  }
+  .gameBoard {
+    margin-top: 20px;
+  }
+  .moves,
+  .timer {
+    top: -15px;
+    font-family: 'Poppins';
+    color: $third_color;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .moves {
+    left: 300px;
+    #moves {
+      background-color: $seventh_color;
+      padding: 10px 15px 5px;
+      border-radius: 0 50%;
+      color: $fourth_color;
+    }
+  }
+  .timer {
+    width: 200px;
+    right: 250px;
+    background-color: $seventh_color;
+    padding: 10px 15px 5px;
+    border-radius: 25px;
+    color: $fourth_color;
+  }
+}
+/* End Game */
+
+/* Start Default Classes */
+.gameTile {
+  display: inline-block;
+  padding: 3px;
+  height: 175px;
+  width: 190px;
+  overflow: hidden;
+}
+.flipImage {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $third_color;
+}
+/* End Default Classes */
+
+.footer {
+  height: 45px;
+  a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* Keyframes */
+@keyframes scaleAni {
+  0%,
+  100% {
+    transform: 0;
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box {
+    width: 70%;
+  }
+  .popup {
+    width: 70%;
+  }
+}

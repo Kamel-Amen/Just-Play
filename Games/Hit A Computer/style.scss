@@ -1,0 +1,219 @@
+/* Variables */
+$main_Color: #2f3139;
+$second_Color: #89cff0;
+$third_color: #00c89f;
+$fourth-color: #ff6600;
+$fifth-color: #ff4d4d;
+$desk_Color: #deb887;
+/* Variables */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Bangers&family=Bowlby+One+SC&family=Cairo&family=Indie+Flower&family=Josefin+Sans&family=Josefin+Slab&family=Lobster&family=Ms+Madi&family=Pacifico&family=Poppins&family=Raleway&family=Square+Peg&display=swap');
+
+/* Start Body */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0 !important;
+  font-family: 'Pacifico' !important;
+}
+/* End Body */
+
+/* Start Body */
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 28%,
+    rgba(0, 212, 255, 1) 75%
+  );
+}
+/* End Body */
+
+/* Start Left Menu */
+.menu {
+  left: 0;
+  width: 105px;
+  height: 105px;
+  border-radius: 0 0 100% 0;
+  background-color: $fifth-color;
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+  border: 0 solid $main_Color;
+  border-width: 0 3px 3px 0;
+  span {
+    width: 105px;
+    height: 110px;
+    padding: 10px 5px 25px 0;
+    transform: rotate(-39deg);
+    img {
+      width: 75%;
+      height: 90%;
+    }
+  }
+  &:hover {
+    width: 325px;
+    height: 100%;
+    border-radius: 0;
+    background-color: $main_Color;
+    ul > li {
+      display: block;
+    }
+  }
+  ul {
+    li,
+    a {
+      display: none;
+      font: normal 2em / normal 'Josefin Sans';
+      margin-bottom: 30px;
+      cursor: pointer;
+      padding: 10px 0;
+      color: $second_Color;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $main_Color !important;
+        background: $second_Color;
+        transform: scale(1.2, 1.2);
+        a {
+          color: $main_Color;
+        }
+      }
+    }
+  }
+}
+/* End Left Menu */
+
+/* Start Score Parts */
+.score_Div {
+  margin-top: 75px;
+  button {
+    width: 200px;
+    height: 150px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: $main_Color;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 13.3px 7.1px 2px rgba(0, 0, 0, 0.036),
+      12.6px 6.8px 4.2px rgba(0, 0, 0, 0.052),
+      11.2px 6px 7px rgba(0, 0, 0, 0.064),
+      10.5px 5.7px 10.7px rgba(0, 0, 0, 0.075),
+      12px 6.4px 16.3px rgba(0, 0, 0, 0.086),
+      17.2px 9.2px 25.9px rgba(0, 0, 0, 0.098),
+      30.2px 16.2px 40.9px rgba(0, 0, 0, 0.114),
+      93px 50px 57px rgba(0, 0, 0, 0.15);
+    background: $fifth-color;
+    transition: transform 0.5s ease-in-out;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .timer,
+  .remain {
+    font-size: 2.5em;
+    color: $main_Color;
+    position: absolute;
+    right: 50px;
+    span {
+      background: $main_Color;
+      color: $fourth-color;
+      padding: 10px;
+      border-radius: 25%;
+    }
+  }
+  .timer {
+    width: 65px;
+    top: 400px;
+    img {
+      display: block;
+      width: 100%;
+      height: 50%;
+    }
+  }
+  .remain {
+    top: 125px;
+  }
+}
+/* End Score Parts */
+
+/* Start Game Board */
+.gameBoard {
+  background-color: $fifth-color;
+  width: 80%;
+  height: 500px;
+  margin: 25px auto 0;
+  border-radius: 25px;
+  transform: translateX(-1250px);
+  transition: transform 0.5s ease-in-out;
+  transition-delay: 0.5s;
+  h1 {
+    padding: 10px 0;
+    color: $main_Color;
+    font-family: 'Pacifico';
+    text-decoration: underline;
+    &:hover {
+      font-family: 'Poppins';
+    }
+  }
+  .office {
+    background-color: $second_Color;
+    float: left;
+    width: 17%;
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 4%;
+    border-radius: 10px;
+    .desk {
+      width: 100%;
+      height: 45%;
+      position: absolute;
+      bottom: 0;
+      background-color: lighten($color: $main_Color, $amount: 10%);
+      z-index: 2;
+    }
+    .computer {
+      background: url('/Imgs/computer.png') bottom center no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 60%;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+/* End Game Board */
+
+.footer {
+  height: 57px;
+  text-align: left;
+  a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/* Custom Style Classes */
+.popUp {
+  top: 0 !important;
+}
+.popDown {
+  display: none;
+}
+.clearFix {
+  clear: both;
+}
+/* Custom Style Classes */
