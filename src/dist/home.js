@@ -53,7 +53,7 @@ typeWriter.style.setProperty('--characters', text.length);
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 // Start Section 3
-fetch('./data.json')
+fetch('/data.json')
   .then((response) => response.json())
   .then((data) =>
     data.map((game) => {
