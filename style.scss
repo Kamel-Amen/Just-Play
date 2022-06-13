@@ -90,3 +90,31 @@ body {
   }
 }
 /* End Footer */
+
+/* Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .ml10 > .text-wrapper > .letters {
+    font-size: 0.75em;
+  }
+  #container:hover .blue {
+    transform: translateX(105px) translateY(-42px) !important;
+  }
+  #container:hover .darkBlue {
+    transform: translateX(120px) translateY(15px) !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .ml10 > .text-wrapper > .letters {
+    font-size: 0.85em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .ml10 > .text-wrapper > .letters {
+    font-size: 1em;
+  }
+}
