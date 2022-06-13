@@ -277,3 +277,40 @@ body {
 /* End Parent */
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 500px) and (max-width: 1080px) {
+  header {
+    font-size: 2em !important;
+  }
+  .ml11 {
+    font-size: 1.3em !important;
+  }
+  .sec-2 {
+    .typewriter-effect {
+      padding-top: 25px !important;
+      .text {
+        font-size: 0.6em !important;
+      }
+    }
+    p {
+      font-size: 0.85em !important;
+      margin-top: 25px !important;
+      line-height: 30px !important;
+      width: 360px !important;
+    }
+  }
+  .sec-3 > .games > .game {
+    height: auto;
+    overflow: auto !important;
+    .game-info {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
