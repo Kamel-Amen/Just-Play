@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Word Scramble Game || Kamel Amen</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./public/wordScrambleGuessingGame.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="row m-0">
+      <!-- Start Left Side -->
+      <div class="left-side p-0 col-3">
+        <div class="left-side-content text-center">
+          <h2 class="text-decoration-underline">Records</h2>
+          <ul class="records list-unstyled">
+            <li class="row m-0">
+              <span class="col-1">N</span>
+              <span class="col">Points</span>
+              <span class="col">Guesses</span>
+              <span class="col">Time</span>
+              <span class="col">Level</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Left Side -->
+
+      <!-- Start Game -->
+      <div class="game col-7 text-center pe-5">
+        <h2 class="game-header text-decoration-underline mt-5">
+          WORD Scramble GAME!
+        </h2>
+        <button class="btn start mt-3 mb-4 fs-3" onclick="start('easy');">
+          START
+        </button>
+        <div class="guess-area position-relative mt-5">
+          <span class="window d-block position-absolute"></span>
+          <div class="options row m-0">
+            <p class="col-4 timer">Timer : <span id="timer">00</span></p>
+            <p class="col-3 lives">Lives : <span id="lives">0</span></p>
+            <p class="col-5 guesses">
+              Remain-Guesses : <span id="guesses">0</span>
+            </p>
+          </div>
+          <h2 class="fs-2"></h2>
+          <input
+            type="text"
+            class="p-2 fs-2 me-2"
+            id="myInput"
+            placeholder="Enter Your Guess ..."
+          />
+          <button
+            class="guess border-0 fs-1 py-1 px-3 mt-3"
+            id="guessBtn"
+            onclick="rGuess();"
+          >
+            Guess
+          </button>
+        </div>
+      </div>
+      <!-- End Game -->
+
+      <!-- Start Right Side -->
+      <div class="right-side col-2 position-relative text-center">
+        <div class="levels-holder">
+          <div class="levels overflow-hidden border-top-0">
+            <h1>Levels</h1>
+            <span onclick="start('easy');">EASY</span>
+            <span onclick="start('medium');">MEDIUM</span>
+            <span onclick="start('hard');">HARD</span>
+          </div>
+        </div>
+        <div class="points-bar-holder overflow-hidden">
+          <span class="points-bar d-block">POINTS BATTERY</span>
+        </div>
+      </div>
+      <!-- End Right Side -->
+    </div>
+
+    <div class="developer position-fixed">
+      <a
+        target="_blank"
+        href="https://kamel-amen.github.io/New-Portfolio/index.html"
+        class="btn btn-primary"
+        >Developer</a
+      >
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./public/wordScrambleGuessingGame.js"></script>
+  </body>
+</html>

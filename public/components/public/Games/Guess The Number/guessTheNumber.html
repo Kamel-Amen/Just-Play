@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess the number || Kamel Amen</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./public/guessTheNumber.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="parent w-100 h-100 position-fixed">
+      <div class="game w-50 my-0 mx-auto p-4 text-center">
+        <p id="message" class="fs-1 my-0 mx-auto">Your Guesses</p>
+        <input id="guess-1" type="number" min="0" max="9" value="" required />
+        <input
+          class="mx-5"
+          id="guess-2"
+          type="number"
+          min="0"
+          max="9"
+          value=""
+          required
+        />
+        <input id="guess-3" type="number" min="0" max="9" value="" required />
+        <button
+          id="btn"
+          class="btn btn-info btn-lg d-block my-0 mx-auto border-0"
+          onclick="start();"
+        >
+          Guess Now!
+        </button>
+      </div>
+      <div id="output" class="output mx-auto my-0 text-center"></div>
+    </div>
+
+    <div class="developer position-fixed">
+      <a
+        target="_blank"
+        href="https://kamel-amen.github.io/New-Portfolio/index.html"
+        class="btn btn-dark"
+        >Developer</a
+      >
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./public/guessTheNumber.js"></script>
+  </body>
+</html>
