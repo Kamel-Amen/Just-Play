@@ -1,3 +1,5 @@
+window.onload = buildGames();
+
 // Start Section 1
 var textWrapper = document.querySelector('.ml11 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(
@@ -50,14 +52,55 @@ typeWriter.style.setProperty('--characters', text.length);
 // End Section 2
 
 // Start Section 3
-window.onload = fetch('./public/home.json')
-  .then((res) => res.json())
-  .then((data) => buildGames(data));
+function buildGames() {
+  const data = [
+    {
+      id: 1,
+      name: 'Word Scramble Game',
+      info: 'Simple guessing the right word game, with 3 different levels of difficulty and points battery to collect all your correct answers with points.',
+      image: './assets/Games/wordScrambleGuessingGame.png',
+      game: './public/Games/Word Scramble Guessing Game/wordScrambleGuessingGame.html',
+    },
+    {
+      id: 2,
+      name: 'Guess The Number Game',
+      info: 'Guess the numbers game, with 3 different levels of difficulty and points battery to collect all your correct answers with points.',
+      image: './assets/Games/GuessTheNumber.png',
+      game: './public/Games/Guess The Number/guessTheNumber.html',
+    },
+    {
+      id: 3,
+      name: 'Guessing Word Game',
+      info: 'Guess the right word from the squares down. You have 3 lives and timer to keep tracking and 5 levels fo difficulty to choose from.',
+      image: './assets/Games/GuessTheWorld.png',
+      game: './public/Games/Guessing Word Game/guessingWordGame.html',
+    },
+    {
+      id: 4,
+      name: 'Hit The Computer',
+      info: 'Hit the computers to achieve success as you have certain number of computers that you must hit.',
+      image: './assets/Games/HitaComputer.png',
+      game: './public/Games/Hit A Computer/hitAComputer.html',
+    },
+    {
+      id: 5,
+      name: 'Memory Game',
+      info: 'Remember the pictures places and win, all what you do is collect and translated to points.',
+      image: './assets/Games/MemoryGame.png',
+      game: './public/Games/Memory Game/MemoryGame.html',
+    },
+    {
+      id: 6,
+      name: 'Color Matching Game',
+      info: 'Match the color and win.',
+      image: './assets/Games/ColorMatchingGame.png',
+      game: './public/Games/Color Matching Game/colorMatchingGame.html',
+    },
+  ];
 
-function buildGames(data) {
   const gamesArea = document.querySelector('#gamesArea');
   gamesArea.innerHTML = data.map((game) => {
-    return `<div class="game text-dark d-inline-block m-3">
+    return `<div class="game text-dark d-inline-block m-3" key=${game.id}>
       <div class="card" style="width: 18rem;">
       <img src="${game.image}" class="card-img-top" style="height: 10rem;" alt="${game.name}">
       <div class="card-body">
